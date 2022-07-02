@@ -7,6 +7,7 @@ const File = require('./models/File');
 
 const app = express();
 app.use(express.urlencoded({ extended: true }));
+app.use(express.static(__dirname + '/public'));
 const upload = multer({ dest: 'uploads' });
 
 mongoose.connect(process.env.DATABASE_URL_REAL);

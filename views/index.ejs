@@ -7,9 +7,10 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0"
     />
+    <link rel="stylesheet" href="/styles/styles.css" />
     <title>Document</title>
   </head>
-  <body>
+  <body class="bg-gray-100">
     <% if (locals.fileLink != null) { %>
     <div style="margin: 1rem 0.5rem">
       Your file is upload
@@ -19,20 +20,55 @@
     <form
       action="/upload"
       method="post"
-      style="
-        display: grid;
-        gap: 0.5rem;
-        grid-template-columns: auto 1fr;
-        max-width: 500px;
-        margin: 0 auto;
-      "
+      class="px-4 my-32 max-w-3xl mx-auto space-y-6"
       enctype="multipart/form-data"
     >
-      <label for="file">File:</label>
-      <input type="file" id="file" name="file" required />
-      <label for="password">Password:</label>
-      <input type="password" id="password" name="password" />
-      <button style="grid-column: span 2" type="submit">Share</button>
+      <h1 class="text-3xl font-semibold">
+        We transfer and send large files online securely
+      </h1>
+      <div class="">
+        <div class="">
+          <label class="block" for="file">File:</label>
+          <input
+            class="block w-full text-sm text-slate-500 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-violet-50 file:text-violet-700 hover:file:bg-violet-100"
+            type="file"
+            id="file"
+            name="file"
+            required
+          />
+        </div>
+        <div class="">
+          <label for="password">Password:</label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            class="border border-gray-400 block py-2 px-4 w-full rounded focus:outline-none focus:border-teal-500"
+          />
+        </div>
+        <div class="">
+          <button
+            class="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+            style="grid-column: span 2"
+            type="submit"
+          >
+            <span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+                aria-hidden="true"
+                class="h-5 w-5 text-indigo-500 group-hover:text-indigo-400"
+              >
+                <path
+                  d="M10.894 2.553a1 1 0 00-1.788 0l-7 14a1 1 0 001.169 1.409l5-1.429A1 1 0 009 15.571V11a1 1 0 112 0v4.571a1 1 0 00.725.962l5 1.428a1 1 0 001.17-1.408l-7-14z"
+                />
+              </svg>
+            </span>
+            Share
+          </button>
+        </div>
+      </div>
     </form>
   </body>
 </html>

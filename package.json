@@ -5,20 +5,28 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "devStart": "nodemon server.js"
+    "devStart": "npm run build:css && nodemon server.js",
+    "build:css": "postcss public/styles/tailwind.css -o public/styles/styles.css"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "autoprefixer": "^10.4.7",
     "bcrypt": "^5.0.1",
     "dotenv": "^16.0.1",
     "ejs": "^3.1.8",
     "express": "^4.18.1",
     "mongoose": "^6.4.2",
-    "multer": "^1.4.5-lts.1"
+    "multer": "^1.4.5-lts.1",
+    "postcss": "^8.4.14",
+    "postcss-cli": "^10.0.0"
   },
   "devDependencies": {
-    "nodemon": "^2.0.18"
-  }
+    "nodemon": "^2.0.18",
+    "tailwindcss": "^3.1.4"
+  },
+  "files": [
+    "public/styles/*.css"
+  ]
 }
