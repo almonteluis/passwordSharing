@@ -525,9 +525,6 @@ video {
 .flex {
   display: flex;
 }
-.grid {
-  display: grid;
-}
 .h-5 {
   height: 1.25rem;
 }
