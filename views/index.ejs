@@ -12,9 +12,15 @@
   </head>
   <body class="bg-gray-100">
     <% if (locals.fileLink != null) { %>
-    <div style="margin: 1rem 0.5rem">
-      Your file is upload
-      <a href="<%= locals.fileLink %>"><%= locals.fileLink %> </a>
+    <div
+      class="bg-indigo-300 text-center py-6 text-white font-Barlow no-underline"
+    >
+      Your file is ready to be shared:
+      <a
+        class="font-bold hover:underline"
+        href="<%= locals.fileLink %>"
+        ><%= locals.fileLink %>
+      </a>
     </div>
     <% } %>
     <form
@@ -23,27 +29,31 @@
       class="px-4 my-32 max-w-3xl mx-auto space-y-6"
       enctype="multipart/form-data"
     >
-      <h1 class="text-3xl font-semibold">
+      <h1
+        class="font-Gentium text-3xl font-bold underline underline-offset-2 text-center"
+      >
         We transfer and send large files online securely
       </h1>
       <div class="">
         <div class="">
-          <label class="block" for="file">File:</label>
+          <label class="block font-Barlow" for="file">File:</label>
           <input
-            class="block w-full text-sm text-slate-500 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-violet-50 file:text-violet-700 hover:file:bg-violet-100"
+            class="mt-4 block w-full text-sm text-slate-500 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-violet-50 file:text-violet-700 hover:file:bg-violet-100"
             type="file"
             id="file"
             name="file"
             required
           />
         </div>
-        <div class="">
-          <label for="password">Password:</label>
+        <div class="mb-6">
+          <label class="mb-3 font-Barlow" for="password"
+            >Password:</label
+          >
           <input
             type="password"
             id="password"
             name="password"
-            class="border border-gray-400 block py-2 px-4 w-full rounded focus:outline-none focus:border-teal-500"
+            class="mt-4 border border-gray-400 block py-2 px-4 w-full rounded focus:outline-none focus:border-teal-500"
           />
         </div>
         <div class="">
